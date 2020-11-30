@@ -1,5 +1,13 @@
-body{
+@import "./Vars.scss";
+@import "./Media.scss";
+
+body {
     margin: 0;
-    background-color: aqua;
-    color:white;
+    font-family: $theme-font;
+    background: $main-color;
+  }
+  
+* {
+   box-sizing: border-box;
 }
+  
