@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/components/Carrousel.scss';
 
-export const Carrousel = ({children}) => {
+const Carrousel = ({children}) => {
     return (
         <section className="carousel">
             <div className="carousel__container">
@@ -10,3 +10,5 @@ export const Carrousel = ({children}) => {
         </section>
     )
 }
+
+export default Carrousel;
