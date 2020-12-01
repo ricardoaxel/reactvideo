@@ -10,14 +10,13 @@ import useInitialState from '../hooks/useInitialState'
 
 const API = 'http://localhost:3000/initalState';
 
-export const App = () => {
+export const Home = () => {
     const initialState = useInitialState(API);
     return(
-        <div className="App">
-            <Header/>
+        <>
             <Search/>
             {initialState.mylist.length > 0 &&
-            <Categories title="MyLista">
+            <Categories title="Mi Lista">
                 <Carrousel>
                     {initialState.trends.map(item =>
                     <CarrouselItem key={item.id} {...item} />        
@@ -43,10 +42,8 @@ export const App = () => {
                     )} 
                 </Carrousel>
             </Categories>
-
-
-            <Footer/>
-            
-        </div>
+        </>
     );
 }
+
+export default Home;
